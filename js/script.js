@@ -1,54 +1,52 @@
-const x=10;
+const x =10;
 console.log(x);
-//iteraciones
 
-const cielo=document.getElementById("cielo");
+// iteraciones
+const cielo = document.getElementById("cielo");
 
-for (let i=0; i<5; i++) {
-    
-    cielo.innerHTML += '⭐';
+for(let i=0; i<5; i++){
+    cielo.innerHTML += '⭐'
 }
 
-const planetas= ["🌍", "🪐", "🌕"]
+const planetas = ["🌍", "🪐", "🌕"]
 
-for (const pleneta of planetas){
-    cielo.innerHTML += pleneta;
-}
-
-let n=0
-while (n<5) {
-    cielo.innerHTML+=("☁️")
-    n++
+for(const planeta of planetas){
+    cielo.innerHTML += planeta;   
 }
 
 let m=0
+while(m<5){
+    cielo.innerHTML += '☁️';
+    m++; 
+}
+
+let n=0;
 do{
-    cielo.innerHTML +=("🚀")
-    m++
-}while(m<4)
-    
-//costantes
+    cielo.innerHTML += '🚀'
+    n++;
+}while(n<4)
+
 const btnEstrella = document.getElementById("btnEstrella");
 
 btnEstrella.addEventListener("click", () => {
-    cielo.innerHTML += "⭐";
+    cielo.innerHTML += '⭐';
 });
 
 const btnPlaneta = document.getElementById("btnPlaneta");
 
 btnPlaneta.addEventListener("dblclick", () => {
-    cielo.innerHTML += "🪐";
+    cielo.innerHTML += '🪐';
 });
 
 const inputEmoji = document.getElementById("inputEmoji");
-const btnAgregarEmoji = document.getElementById("btnAgregarEmoji");
+const btnAgregaEmoji = document.getElementById("btnAgregaEmoji");
 
-btnAgregarEmoji.addEventListener("click", () => {
+btnAgregaEmoji.addEventListener("click", () => {
     var emoji = inputEmoji.value.trim();
-    if (emoji) cielo.innerHTML += emoji;
+    if(emoji) cielo.innerHTML += emoji;
     inputEmoji.value = "";
 });
 
-inputEmoji.addEventListener("keydown", e=>{
-    if(e.key==="Escape") cielo.innerHTML="";
+inputEmoji.addEventListener("keydown", e => {
+    if(e.key === "Escape") cielo.innerHTML = "";
 });
