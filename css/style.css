@@ -50,3 +50,36 @@
    color: #ffff;
    background-color: black;
 }
+
+/*Carro de compras*/
+
+#ListaCarrito{
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid hsl(336, 74%, 40%);
+  background-color: rgb(237, 240, 144);
+}
+
+/*Concurrencia*/
+
+pre{
+  text-align: left;
+  background-color: coral;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  color: blue;
+}
+
+/*Try Catch*/
+#bodyTry{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mensaje{
+  font-weight: bold;
+  color: red;
+}
+
